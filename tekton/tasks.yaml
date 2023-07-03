@@ -54,10 +54,10 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: nose
-  workspaces:
-    - name: source
 spec:
   description: This task will run nosetests on the provided input.
+  workspaces:
+    - name: source
   params:
     - name: args
       description: arguments for nosetests
