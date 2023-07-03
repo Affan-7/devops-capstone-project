@@ -24,6 +24,8 @@ HTTPS_ENVIRON = {'wsgi.url_scheme': 'https'}
 ######################################################################
 #  T E S T   C A S E S
 ######################################################################
+
+
 class TestAccountService(TestCase):
     """Account Service Tests"""
 
@@ -162,7 +164,7 @@ class TestAccountService(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data['name'], 'Tom Holland')
         self.assertEqual(data['email'], 'tomholland@marvel.com')
-    
+
     def test_account_not_found_while_updating(self):
         """It should not update an Account that is not found"""
         account = self._create_accounts(1)[0]
